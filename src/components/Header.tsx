@@ -3,10 +3,10 @@ import Logo from "./Logo"
 import styled from "styled-components"
 import LoggedInNav from "./Header"
 import { useSelector, useDispatch } from "react-redux"
-import { selectLogin } from "../../services/Selectors"
-import { fetchUserProfile } from "../../features/Userprofile"
+import { selectLogin } from "../services/Selectors"
+import { fetchUserProfile } from "../feature/Userprofile"
 import { useEffect } from "react"
-import * as loginActions from '../../features/Login'
+import * as loginActions from '../feature/Login'
 
 const HeaderContainer = styled.nav`
     display: flex;
