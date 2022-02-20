@@ -1,10 +1,10 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { fetchUserProfile } from '../features/Userprofile'
+import { fetchUserProfile } from '../feature/Userprofile'
 import { selectLogin } from "../services/Selectors"
 import styled from "styled-components"
-import ProfileHeader from "../components/User/ProfileHeader/Profilheader"
-import AccountBlock from "../components/User/AccountBlock"
+import ProfileHeader from "../components/ProfileHeader/Profilheader"
+import AccountBlock from "../components/Account"
 import accounts from "../mock/accounts"
 
 const Main = styled.main`
