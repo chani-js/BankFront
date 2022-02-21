@@ -2,7 +2,7 @@ import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import * as LoginActions from "../../features/Login"
+import * as LoginActions from "../feature/Login"
 import { useNavigate } from "react-router";
 
 const Button = styled.div`

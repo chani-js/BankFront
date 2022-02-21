@@ -1,4 +1,4 @@
-import { logo } from "../../assets/img"
+import { logo } from "../img"
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
 

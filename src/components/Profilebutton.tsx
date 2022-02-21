@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons"
-import { selectUser } from "../../services/Selectors"
+import { selectUser } from "../services/Selectors"
 import { useSelector } from "react-redux"
 
 const Button = styled(Link)`
