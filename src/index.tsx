@@ -10,6 +10,8 @@ import Profil from './pages/Profil';
 import { Provider } from 'react-redux'
 import { store } from './redux/Store'
 import PageNotFound from '../src/pages/PageNotFound'
+import ProtectedRoutes from './feature/PrivateRoute';
+
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,10 +19,10 @@ ReactDOM.render(
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={< Home />} />
           <Route path="sign-in" element={<SignIn />} />
-          <Route path="profil" element={<Profil />} />
-          <Route element={<PageNotFound />} /> /*preparation pagenotfound erreur 404 pour les route qui n'existe pas */
+          <Route path="profil" element={<ProtectedRoutes />} />
         </Routes>
         <Footer />
       </Router>
