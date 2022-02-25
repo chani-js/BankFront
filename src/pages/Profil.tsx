@@ -16,7 +16,7 @@ const Main = styled.main`
     align-items: center;
 `
 
-export default function User() {
+export default function Profil() {
     const dispatch = useDispatch()
     const token = useSelector(selectLogin).token
     useEffect(() => {

@@ -1,5 +1,5 @@
-import FeatureItem from "./Featureitem"
-import { iconChat, iconMoney, iconSecurity } from "../../../img"
+import FeatureItem from "./Features/Featureitem"
+import { iconChat, iconMoney, iconSecurity } from "../../img"
 import styled from "styled-components"
 
 const featuresArray = [

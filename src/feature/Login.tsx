@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { selectLogin } from "../services/Selectors";
-import { AppDispatch, RootState } from "../stores/Store"
+import { AppDispatch, RootState } from "../redux/Store"
 
 type User = {
     email: string,

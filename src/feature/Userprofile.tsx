@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { selectUser } from '../services/Selectors'
-import { AppDispatch, RootState } from '../stores/Store'
+import { AppDispatch, RootState } from '../redux/Store'
 
 type Error = {
     status: number,
