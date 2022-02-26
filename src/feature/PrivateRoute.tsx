@@ -1,13 +1,8 @@
-import React from "react";
-import { Navigate, Outlet } from "react-router";
+import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
 
-const useAuth = () => {
-    return true
+const PrivateRoute = ({ auth }: any) => {
+
+    return auth ? <Outlet /> : <Navigate to="/sign-in" />;
 }
-
-const ProtectedRoutes = (props: any) => {
-    const auth = useAuth()
-    return auth ? <Outlet /> : <Navigate to="/Home" />
-}
-
-export default ProtectedRoutes
+export default PrivateRoute
