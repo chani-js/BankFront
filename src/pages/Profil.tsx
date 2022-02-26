@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { fetchUserProfile } from '../feature/Userprofile'
+import { useNavigate } from "react-router-dom"
+import { fetchUserProfile } from "../feature/Userprofile"
 import { selectLogin } from "../services/Selectors"
 import styled from "styled-components"
 import ProfileHeader from "../components/ProfileHeader/Profilheader"
@@ -14,15 +15,18 @@ const Main = styled.main`
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-`
 
-export default function Profil() {
+    `
+
+export default function Profil({ auth }: any) {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const token = useSelector(selectLogin).token
     useEffect(() => {
-        dispatch(fetchUserProfile(token))
-    }, [dispatch, token])
-
+        if (token.length === 0) {
+            navigate("/sign-in")
+        } else (fetchUserProfile(token))
+    }, [dispatch, token, navigate])
     return (
         <Main>
             <ProfileHeader />

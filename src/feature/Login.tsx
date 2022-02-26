@@ -60,6 +60,7 @@ export function tryLogin() {
             const data = await response.json()
             console.log("data===>", data, "datastatus==>", data.status)
             if (data.status === 200) {
+                localStorage.setItem("token", data.body.token)
                 console.log(" 1==>")
                 dispatch(actions.resolved(data))
                 console.log(" 2==>")
